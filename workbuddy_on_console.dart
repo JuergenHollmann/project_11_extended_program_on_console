@@ -33,7 +33,7 @@ void main() {
         print(
             "---------------------------------------------------------------------");
 
-      // Benutzer soll sich mit Username und Passwort einloggen können.
+      // Der Benutzer muss sich mit Username und Passwort einloggen.
       case "e" || "E":
         stdout.write("Bitte gib deinen Benutzernamen ein: ");
         stdin.readLineSync()!;
@@ -58,7 +58,7 @@ void main() {
 
     if (isMenuPartTwoRunning) {
 // Wenn es in den nächsten Bereich gehen soll:
-  // Wie lange läuft der zweite Teil des Programms?
+      // Wie lange läuft der zweite Teil des Programms?
       while (isMenuPartTwoRunning) {
         isMenuPartTwoRunning = true;
 
@@ -81,18 +81,36 @@ void main() {
 
           // Der Benutzer will jetzt eine Quittung eingeben.
           case "q" || "Q":
-            stdout.write("Wo warst Du beim Einkaufen?      ");
+
+            // Der Benutzer muss eingeben, bei welchem Händler er eingekauft hat.
+            stdout.write("Wo warst Du beim Einkaufen?                    ");
             stdin.readLineSync()!;
 
-            // Den Händler speichern:
-            // code
-
-            stdout.write("Welchen Artikel hast Du gekauft? ");
+            // Der Benutzer muss eingeben, welchen Artikel er bei dem Händler eingekauft hat.
+            stdout.write("Welchen Artikel hast Du gekauft?               ");
             stdin.readLineSync();
 
-            // Den gekauften Artikel speichern:
-            // code
+            // Der Benutzer muss eingeben, wieviel Stück er von dem Artikel eingekauft hat.
+            stdout.write("Wieviel Stück von dem Artikel hast Du gekauft? ");
+            stdin.readLineSync();
 
+// Überprüfen, ob der User hier NUR Ziffern (als int und mit max. einem Punkt und "0" ist nicht erlaubt) eingegeben hat.            
+
+            // Der Benutzer muss eingeben, was 1 Stück von dem Artikel kostet.
+            stdout.write("Was hat der Artikel (in €) gekostet?           ");
+            stdin.readLineSync();
+
+// Überprüfen, ob der User hier NUR Ziffern (als double und mit max. einem Punkt und "0" darf erlaubt sein) eingegeben hat.
+
+// Wenn der User nur Ziffern eigegeben hat, die Summe auf 2 Stellen hinter dem Komma runden.
+
+// Wenn der User nur Ziffern eigegeben hat, die MwSt. berechnen.
+
+// Nach der MwSt.-Berechnung die Zwischensumme mit der Anzahl der Artikel multiplizieren.
+
+// Das Ergebnis der Berechnung ausgeben:
+            print(
+                "---------------------------------------------------------------------");
             print(
                 "Deine Ausgabe über xxx € (+ MwSt. xxx €) \nbeträgt insgesamt sumXXX € ");
             print(
