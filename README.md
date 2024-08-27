@@ -9,3 +9,7 @@ Der Benutzer bekommt eine Vorstellung davon, welche Menüpunkte er beim Starten 
 ### Further program
 The program is started with "main.dart" and first asks the user to either log in or exit the program.
 Das Programm wird mit "main.dart" gestartet und fordert als erstes den User auf, sich entweder einzuloggen, oder das Programm wieder zu beenden.
+
+### Steps
+The first question is: "What do you want to do now?"
+Die erste Frage lautet: "Was möchtest Du jetzt tun?"
