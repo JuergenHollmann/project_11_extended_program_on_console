@@ -14,6 +14,7 @@ void main() {
       "---------------------------------------------------------------------");
   bool isMenuPartOneRunning = true;
   bool isMenuPartTwoRunning = false;
+  
 // Wie lange läuft der erste Teil des Programms?
   while (isMenuPartOneRunning) {
     print(
@@ -25,6 +26,8 @@ void main() {
     String userChoiceInput = stdin.readLineSync()!;
 
     switch (userChoiceInput) {
+
+      // Der Benutzer möchte das Programm beenden.
       case "b" || "B":
         isMenuPartOneRunning = false;
         print(
@@ -33,18 +36,18 @@ void main() {
         print(
             "---------------------------------------------------------------------");
 
-      // Der Benutzer muss sich mit Username und Passwort einloggen.
+      // Der Benutzer möchte sich mit Username und Passwort einloggen.
       case "e" || "E":
         stdout.write("Bitte gib deinen Benutzernamen ein: ");
         stdin.readLineSync()!;
 
-        // Überprüfen ob der Benutzername korrekt ist:
+// Überprüfen ob der Benutzername korrekt ist:
         // code
 
         stdout.write("Bitte gib dein Passwort ein:        ");
         stdin.readLineSync();
 
-        // Überprüfen ob das Passwort korrekt ist:
+// Überprüfen ob das Passwort korrekt ist:
         // code
         print("Benutzername und Passwort wurden korrekt eingeben.");
         print(
@@ -70,7 +73,10 @@ void main() {
         // Eingabe des Benutzers.
         String userChoiceInput = stdin.readLineSync()!;
 
+        // Überprüfen, was der Benutzer eingegeben hat und ob das einem der cases entspricht:
         switch (userChoiceInput) {
+
+          // Der Benutzer mmöchte das Programm beenden.
           case "b" || "B":
             isMenuPartTwoRunning = false;
             print(
@@ -79,7 +85,7 @@ void main() {
             print(
                 "---------------------------------------------------------------------");
 
-          // Der Benutzer will jetzt eine Quittung eingeben.
+          // Der Benutzer möchte jetzt eine Quittung eingeben.
           case "q" || "Q":
 
             // Der Benutzer muss eingeben, bei welchem Händler er eingekauft hat.
