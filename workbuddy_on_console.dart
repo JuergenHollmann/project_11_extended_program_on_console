@@ -1,4 +1,4 @@
-import 'dart:io';
+import 'dart:io' show stdin, stdout;
 
 void main() {
   stdout.write(
