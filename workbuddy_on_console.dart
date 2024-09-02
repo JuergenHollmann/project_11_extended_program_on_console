@@ -6,7 +6,7 @@ void main() {
   print(
       "---------------------------------------------------------------------");
 
-  print("Willkommen bei WorkBuddy.");
+  print("Willkommen bei WorkBuddy!");
   print(
       "WorkBuddy ist eine App, die Dir unter dem Motto \"save time and money\"");
   print("hilft, deine Buchhaltung besser zu organisieren.");
@@ -14,7 +14,7 @@ void main() {
       "---------------------------------------------------------------------");
   bool isMenuPartOneRunning = true;
   bool isMenuPartTwoRunning = false;
-  
+
 // Wie lange läuft der erste Teil des Programms?
   while (isMenuPartOneRunning) {
     print(
@@ -26,7 +26,6 @@ void main() {
     String userChoiceInput = stdin.readLineSync()!;
 
     switch (userChoiceInput) {
-
       // Der Benutzer möchte das Programm beenden.
       case "b" || "B":
         isMenuPartOneRunning = false;
@@ -75,7 +74,6 @@ void main() {
 
         // Überprüfen, was der Benutzer eingegeben hat und ob das einem der cases entspricht:
         switch (userChoiceInput) {
-
           // Der Benutzer mmöchte das Programm beenden.
           case "b" || "B":
             isMenuPartTwoRunning = false;
@@ -100,7 +98,7 @@ void main() {
             stdout.write("Wieviel Stück von dem Artikel hast Du gekauft? ");
             stdin.readLineSync();
 
-// Überprüfen, ob der User hier NUR Ziffern (als int und mit max. einem Punkt und "0" ist nicht erlaubt) eingegeben hat.            
+// Überprüfen, ob der User hier NUR Ziffern (als int und mit max. einem Punkt und "0" ist nicht erlaubt) eingegeben hat.
 
             // Der Benutzer muss eingeben, was 1 Stück von dem Artikel kostet.
             stdout.write("Was hat der Artikel (in €) gekostet?           ");
