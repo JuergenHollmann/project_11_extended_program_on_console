@@ -6,7 +6,7 @@ void main() {
   print(
       "---------------------------------------------------------------------");
 
-  print("Willkommen bei WorkBuddy!");
+  print("\u{1F6E0} --> Willkommen bei WorkBuddy! <-- \u{1F6E0}"); // 🛠
   print(
       "WorkBuddy ist eine App, die Dir unter dem Motto \"save time and money\"");
   print("hilft, deine Buchhaltung besser zu organisieren.");
