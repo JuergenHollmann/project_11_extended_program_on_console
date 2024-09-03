@@ -1,5 +1,7 @@
 import 'dart:io' show stdin, stdout;
 
+import 'workbuddy_functions.dart';
+
 void main() {
   stdout.write(
       "\x1B[2J\x1B[0;0H"); // entfernt die Zusatz-Info im Terminal --> benötigt import "dart:io";
@@ -96,7 +98,8 @@ void main() {
             stdin.readLineSync();
 
             // Der Benutzer muss eingeben, wieviel Stück er von dem Artikel eingekauft hat.
-            stdout.write("Wieviel Stück von dem Artikel hast Du gekauft? ");
+            stdout.write(
+                "Wieviel Stück von dem Artikel hast Du gekauft? "); // xxxPrice
             stdin.readLineSync();
 
 // Überprüfen, ob der User hier NUR Ziffern (als int und mit max. einem Punkt und "0" ist nicht erlaubt) eingegeben hat.
@@ -113,11 +116,19 @@ void main() {
 
 // Nach der MwSt.-Berechnung die Zwischensumme mit der Anzahl der Artikel multiplizieren.
 
-// Das Ergebnis der Berechnung ausgeben:
+// Das Ergebnis der Berechnung ausgeben (Funktion getInvoiceResult):
             print(
                 "---------------------------------------------------------------------");
+            // double itemPrice = 200;
+            // double quantity = 1;
+            // double taxSum = 0;
+            // double totalSum = 0;
             print(
-                "Deine Ausgabe über xxx € (+ MwSt. xxx €) \nbeträgt insgesamt sumXXX € ");
+                //    "Deine Ausgabe über ${getInvoiceResult(200, 2,)} € enthält xxx € Mehrwertsteuer.");
+                "Du hast für xxx einen Betrag über ${getInvoiceResult(199.99, 2.34)} € ausgegeben.");
+
+            //print (getInvoiceResult(itemPrice, quantity));
+
             print(
                 "---------------------------------------------------------------------");
             isMenuPartTwoRunning = false;
@@ -127,4 +138,18 @@ void main() {
       }
     }
   }
+// Nur zum Testen:
+  // double itemPrice = 200;
+  // double quantity = 1;
+  // double taxSum = 0;
+  // double totalSum = 0;
+  // taxSum = itemPrice * quantity * 0.19;
+  // totalSum = itemPrice * quantity + taxSum;
+  // print("$totalSum €");
+  // print(
+  //     "---------------------------------------------------------------------");
+  // print("---------------------------------------");
+  // print("11. Multiplikation zweier Zahlen");
+  // print("Das Produkt ist ${productResult(2, 2)}");
+  // print("---------------------------------------");
 }
