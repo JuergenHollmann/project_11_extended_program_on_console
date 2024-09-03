@@ -125,7 +125,7 @@ void main() {
             // double totalSum = 0;
             print(
                 //    "Deine Ausgabe über ${getInvoiceResult(200, 2,)} € enthält xxx € Mehrwertsteuer.");
-                "Du hast für xxx einen Betrag über ${getInvoiceResult(199.99, 2.34)} € ausgegeben.");
+                "Du hast einen Betrag über ${getInvoiceResult(199.99, 2.34)} € für ein Käsebrot ausgegeben.");
 
             //print (getInvoiceResult(itemPrice, quantity));
 
