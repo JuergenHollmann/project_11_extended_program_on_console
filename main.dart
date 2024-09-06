@@ -1,7 +1,6 @@
 import 'dart:io' show stdin, stdout;
 
 import 'functions/get_invoice_result.dart';
-import 'workbuddy_functions.dart';
 
 void main() {
   stdout.write(
