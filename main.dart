@@ -21,12 +21,17 @@ void main() {
 // Wie lange läuft der erste Teil des Programms?
   while (isMenuPartOneRunning) {
     print(
-        "Was möchtest du jetzt tun? \n * Jetzt (e)inloggen \n * Die App (b)eenden");
+        "Was möchtest du jetzt tun? \n * Jetzt ei[n]loggen \n * Die App [b]eenden \n Bitte alle Eingaben mit \"Enter\" bestätigen.");
     print(
         "---------------------------------------------------------------------");
 
     // Eingabe des Benutzers.
     String userChoiceInput = stdin.readLineSync()!;
+    // print(
+    //     "---------------------------------------------------------------------");
+    print("Du hast [$userChoiceInput] eingegeben.");
+    // print(
+    //     "---------------------------------------------------------------------");
 
     switch (userChoiceInput) {
       // Der Benutzer möchte das Programm beenden.
@@ -39,7 +44,7 @@ void main() {
             "---------------------------------------------------------------------");
 
       // Der Benutzer möchte sich mit Username und Passwort einloggen.
-      case "e" || "E":
+      case "n" || "N":
         stdout.write("Bitte gib deinen Benutzernamen ein: ");
         stdin.readLineSync()!;
 
@@ -68,12 +73,17 @@ void main() {
         isMenuPartTwoRunning = true;
 
         print(
-            "Was möchtest du jetzt tun? \n * Eine (Q)uittung eingeben \n * Die App (b)eenden");
+            "Was möchtest du jetzt tun? \n * Eine Qu(i)ttung eingeben \n * Die App (b)eenden \n Bitte die Eingabe mit \"Enter\" bestätigen.");
         print(
             "---------------------------------------------------------------------");
 
         // Eingabe des Benutzers.
         String userChoiceInput = stdin.readLineSync()!;
+        print(
+            "---------------------------------------------------------------------");
+        print("Du hast [$userChoiceInput] eingegeben.");
+        print(
+            "---------------------------------------------------------------------");
 
         // Überprüfen, was der Benutzer eingegeben hat und ob das einem der cases entspricht:
         switch (userChoiceInput) {
@@ -91,7 +101,12 @@ void main() {
 
             // Der Benutzer muss eingeben, bei welchem Händler er eingekauft hat.
             stdout.write("Wo warst Du beim Einkaufen?                    ");
-            stdin.readLineSync()!;
+            String userChoiceInput = stdin.readLineSync()!;
+            print(
+                "---------------------------------------------------------------------");
+            print("Du warst einkaufen bei $userChoiceInput.");
+            print(
+                "---------------------------------------------------------------------");
 
             // Der Benutzer muss eingeben, welchen Artikel er bei dem Händler eingekauft hat.
             stdout.write("Welchen Artikel hast Du gekauft?               ");
