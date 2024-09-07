@@ -1,21 +1,24 @@
 double getInvoiceResult(
-    //double itemPrice, double quantity, double taxSum, double totalSum) {
     double itemPrice,
     double quantity) {
-  // itemPrice;
-  // quantity;
+
   double taxPercent = 19;
   double taxSum;
   double totalSum;
-  taxSum = itemPrice * quantity * (taxPercent/100);
+  taxSum = itemPrice * quantity * (taxPercent / 100);
   totalSum = itemPrice * quantity + taxSum;
+
   print(
       "Netto-Einzelpreis:    $itemPrice € pro Stück"); //         auf 2 Stellen nach dem Komma kürzen
   print(
       "gekaufte Einheiten:   $quantity Stück"); // auf 2 Stellen nach dem Komma kürzen, wenn kg oder andere Einheiten ausgewählt werden.
 
   print(
-      "Mehrwertsteuer:       $taxSum €"); //            auf 2 Stellen nach dem Komma kürzen
+      "Mehrwertsteuer:       ${taxSum.toStringAsFixed(2)} €"); // auf 2 Stellen hinter dem Komma gekürzt
+  print("Gesamtsumme           ${totalSum.toStringAsFixed(2)} €");
+  print(
+      "---------------------------------------------------------------------");
+
   return totalSum; //                                   auf 2 Stellen nach dem Komma kürzen
 }
 
