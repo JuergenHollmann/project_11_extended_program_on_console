@@ -27,11 +27,9 @@ void main() {
 
     // Eingabe des Benutzers.
     String userChoiceInput = stdin.readLineSync()!;
-    // print(
-    //     "---------------------------------------------------------------------");
     print("Du hast [$userChoiceInput] eingegeben.");
-    // print(
-    //     "---------------------------------------------------------------------");
+    print(
+        "---------------------------------------------------------------------");
 
     switch (userChoiceInput) {
       // 2) Der Benutzer möchte das Programm beenden.
@@ -79,8 +77,6 @@ void main() {
 
         // Eingabe des Benutzers.
         String userChoiceInput = stdin.readLineSync()!;
-        print(
-            "---------------------------------------------------------------------");
         print("Du hast [$userChoiceInput] eingegeben.");
         print(
             "---------------------------------------------------------------------");
@@ -102,8 +98,6 @@ void main() {
             // 4a) Der Benutzer muss eingeben, bei welchem Händler er eingekauft hat.
             stdout.write("Wo warst Du beim Einkaufen?                    ");
             String userChoiceInput4a = stdin.readLineSync()!;
-            print(
-                "---------------------------------------------------------------------");
             print("Du warst einkaufen bei \"$userChoiceInput4a.\"");
             print(
                 "---------------------------------------------------------------------");
@@ -111,8 +105,6 @@ void main() {
             // 4b) Der Benutzer muss eingeben, welchen Artikel er bei dem Händler eingekauft hat.
             stdout.write("Welchen Artikel hast Du gekauft?               ");
             String userChoiceInput4b = stdin.readLineSync()!;
-            print(
-                "---------------------------------------------------------------------");
             print("Du hast dort den Artikel \"$userChoiceInput4b\" gekauft.");
             print(
                 "---------------------------------------------------------------------");
@@ -127,7 +119,6 @@ void main() {
             // 4d) Der Benutzer muss eingeben, was 1 Stück von dem Artikel kostet.
             stdout.write("Was hat der Artikel (in €) gekostet?           ");
             String userChoiceInput4d = stdin.readLineSync()!;
-            userChoiceInput4d.toString();
 
 // Überprüfen, ob der User hier NUR Ziffern (als double und mit max. einem Punkt und "0" darf erlaubt sein) eingegeben hat.
 
@@ -140,16 +131,16 @@ void main() {
 // 5) Das Ergebnis der Berechnung ausgeben (Funktion getInvoiceResult):
             print(
                 "---------------------------------------------------------------------");
-            // double itemPrice = userChoiceInput4d; // "itemPrice" ist ein "double" und "userChoiceInput4d" ist ein "String" --> umwandeln.
-            // double quantity = 1;
+            double itemPrice = double.parse(userChoiceInput4d); // "itemPrice" ist ein "double" und "userChoiceInput4d" ist ein "String" --> umwandeln mit "double.parse(userChoiceInput4d)."
+            double quantity = double.parse(userChoiceInput4c);
             // double taxSum = 0;
             // double totalSum = 0;
 
             print(
                 //    "Deine Ausgabe über ${getInvoiceResult(200, 2,)} € enthält xxx € Mehrwertsteuer.");
-                "Du hast für $userChoiceInput4c $userChoiceInput4b einen Betrag über ${getInvoiceResult(199.00, 2.34)} € ausgegeben.");
+                "Du hast bei $userChoiceInput4a für $userChoiceInput4c Stück $userChoiceInput4b einen Betrag über ${getInvoiceResult(itemPrice, quantity)} € ausgegeben.");
 
-            //print (getInvoiceResult(itemPrice, quantity));
+            //print (getInvoiceResult(itemPrice, quantity));n
 
             print(
                 "---------------------------------------------------------------------");
