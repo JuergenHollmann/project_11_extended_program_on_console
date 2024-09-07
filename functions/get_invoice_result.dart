@@ -39,3 +39,18 @@ double getInvoiceResult(
 //     return totalSum * 0.19;
 //   }
 // }
+
+// Nur zum Testen:
+  // double itemPrice = 200;
+  // double quantity = 1;
+  // double taxSum = 0;
+  // double totalSum = 0;
+  // taxSum = itemPrice * quantity * 0.19;
+  // totalSum = itemPrice * quantity + taxSum;
+  // print("$totalSum €");
+  // print(
+  //     "---------------------------------------------------------------------");
+  // print("---------------------------------------");
+  // print("11. Multiplikation zweier Zahlen");
+  // print("Das Produkt ist ${productResult(2, 2)}");
+  // print("---------------------------------------");
