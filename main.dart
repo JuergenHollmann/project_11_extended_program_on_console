@@ -34,7 +34,7 @@ void main() {
     //     "---------------------------------------------------------------------");
 
     switch (userChoiceInput) {
-      // Der Benutzer möchte das Programm beenden.
+      // 2) Der Benutzer möchte das Programm beenden.
       case "b" || "B":
         isMenuPartOneRunning = false;
         print(
@@ -43,7 +43,7 @@ void main() {
         print(
             "---------------------------------------------------------------------");
 
-      // Der Benutzer möchte sich mit Username und Passwort einloggen.
+      // 1) Der Benutzer möchte sich mit Username und Passwort einloggen.
       case "n" || "N":
         stdout.write("Bitte gib deinen Benutzernamen ein: ");
         stdin.readLineSync()!;
@@ -73,7 +73,7 @@ void main() {
         isMenuPartTwoRunning = true;
 
         print(
-            "Was möchtest du jetzt tun? \n * Eine Qu(i)ttung eingeben \n * Die App (b)eenden \n Bitte die Eingabe mit \"Enter\" bestätigen.");
+            "Was möchtest du jetzt tun? \n * Eine Qui[t]tung eingeben \n * Die App [b]eenden \n Bitte die Eingabe mit \"Enter\" bestätigen.");
         print(
             "---------------------------------------------------------------------");
 
@@ -87,7 +87,7 @@ void main() {
 
         // Überprüfen, was der Benutzer eingegeben hat und ob das einem der cases entspricht:
         switch (userChoiceInput) {
-          // Der Benutzer mmöchte das Programm beenden.
+          // 2) Der Benutzer mmöchte das Programm beenden.
           case "b" || "B":
             isMenuPartTwoRunning = false;
             print(
@@ -96,30 +96,35 @@ void main() {
             print(
                 "---------------------------------------------------------------------");
 
-          // Der Benutzer möchte jetzt eine Quittung eingeben.
-          case "q" || "Q":
+          // 3) Der Benutzer möchte jetzt eine Quittung eingeben.
+          case "t" || "T":
 
-            // Der Benutzer muss eingeben, bei welchem Händler er eingekauft hat.
+            // 4a) Der Benutzer muss eingeben, bei welchem Händler er eingekauft hat.
             stdout.write("Wo warst Du beim Einkaufen?                    ");
-            String userChoiceInput = stdin.readLineSync()!;
+            String userChoiceInput4a = stdin.readLineSync()!;
             print(
                 "---------------------------------------------------------------------");
-            print("Du warst einkaufen bei $userChoiceInput.");
+            print("Du warst einkaufen bei $userChoiceInput4a.");
             print(
                 "---------------------------------------------------------------------");
 
-            // Der Benutzer muss eingeben, welchen Artikel er bei dem Händler eingekauft hat.
+            // 4b) Der Benutzer muss eingeben, welchen Artikel er bei dem Händler eingekauft hat.
             stdout.write("Welchen Artikel hast Du gekauft?               ");
-            stdin.readLineSync();
+            String userChoiceInput4b = stdin.readLineSync()!;
+            print(
+                "---------------------------------------------------------------------");
+            print("Du warst einkaufen bei $userChoiceInput4b.");
+            print(
+                "---------------------------------------------------------------------");
 
-            // Der Benutzer muss eingeben, wieviel Stück er von dem Artikel eingekauft hat.
+            // 4c) Der Benutzer muss eingeben, wieviel Stück er von dem Artikel eingekauft hat.
             stdout.write(
                 "Wieviel Stück von dem Artikel hast Du gekauft? "); // xxxPrice
-            stdin.readLineSync();
+            String userChoiceInput4c = stdin.readLineSync()!;
 
 // Überprüfen, ob der User hier NUR Ziffern (als int und mit max. einem Punkt und "0" ist nicht erlaubt) eingegeben hat.
 
-            // Der Benutzer muss eingeben, was 1 Stück von dem Artikel kostet.
+            // 4d) Der Benutzer muss eingeben, was 1 Stück von dem Artikel kostet.
             stdout.write("Was hat der Artikel (in €) gekostet?           ");
             stdin.readLineSync();
 
@@ -131,7 +136,7 @@ void main() {
 
 // Nach der MwSt.-Berechnung die Zwischensumme mit der Anzahl der Artikel multiplizieren.
 
-// Das Ergebnis der Berechnung ausgeben (Funktion getInvoiceResult):
+// 5) Das Ergebnis der Berechnung ausgeben (Funktion getInvoiceResult):
             print(
                 "---------------------------------------------------------------------");
             // double itemPrice = 200;
@@ -140,7 +145,7 @@ void main() {
             // double totalSum = 0;
             print(
                 //    "Deine Ausgabe über ${getInvoiceResult(200, 2,)} € enthält xxx € Mehrwertsteuer.");
-                "Du hast einen Betrag über ${getInvoiceResult(199.99, 2.34)} € für ein Käsebrot ausgegeben.");
+                "Du hast für $userChoiceInput4c $userChoiceInput4b einen Betrag über ${getInvoiceResult(199.99, 2.34)} € ausgegeben.");
 
             //print (getInvoiceResult(itemPrice, quantity));
 
@@ -153,18 +158,4 @@ void main() {
       }
     }
   }
-// Nur zum Testen:
-  // double itemPrice = 200;
-  // double quantity = 1;
-  // double taxSum = 0;
-  // double totalSum = 0;
-  // taxSum = itemPrice * quantity * 0.19;
-  // totalSum = itemPrice * quantity + taxSum;
-  // print("$totalSum €");
-  // print(
-  //     "---------------------------------------------------------------------");
-  // print("---------------------------------------");
-  // print("11. Multiplikation zweier Zahlen");
-  // print("Das Produkt ist ${productResult(2, 2)}");
-  // print("---------------------------------------");
 }
