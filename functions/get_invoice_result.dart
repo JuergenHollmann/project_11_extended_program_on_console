@@ -1,5 +1,3 @@
-
-
 double getInvoiceResult(
     //double itemPrice, double quantity, double taxSum, double totalSum) {
     double itemPrice,
