@@ -15,7 +15,7 @@ double getInvoiceResult(
       "gekaufte Einheiten:   $quantity Stück"); // auf 2 Stellen nach dem Komma kürzen, wenn kg oder andere Einheiten ausgewählt werden.
 
   print(
-      "zzgl. Mehrwertsteuer: $taxSum €"); //            auf 2 Stellen nach dem Komma kürzen
+      "Mehrwertsteuer:       $taxSum €"); //            auf 2 Stellen nach dem Komma kürzen
   return totalSum; //                                   auf 2 Stellen nach dem Komma kürzen
 }
 
