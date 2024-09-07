@@ -1,5 +1,4 @@
 import 'dart:io' show stdin, stdout;
-
 import 'functions/get_invoice_result.dart';
 
 void main() {
@@ -7,7 +6,6 @@ void main() {
       "\x1B[2J\x1B[0;0H"); // entfernt die Zusatz-Info im Terminal --> benötigt import "dart:io";
   print(
       "---------------------------------------------------------------------");
-
   print(
       "---[ \u{1F6E0} ]--> Willkommen bei WorkBuddy! <--[ \u{1F6E0} ]---"); // 🛠
   print(
@@ -24,13 +22,11 @@ void main() {
         "Was möchtest du jetzt tun? \n * Jetzt ei[n]loggen \n * Die App [b]eenden \n Bitte alle Eingaben mit \"Enter\" bestätigen.");
     print(
         "---------------------------------------------------------------------");
-
     // Eingabe des Benutzers.
     String userChoiceInput = stdin.readLineSync()!;
     print("Du hast [$userChoiceInput] eingegeben.");
     print(
         "---------------------------------------------------------------------");
-
     switch (userChoiceInput) {
       // 2) Der Benutzer möchte das Programm beenden.
       case "b" || "B":
@@ -40,7 +36,6 @@ void main() {
         print("Die App wurde vom User beendet.");
         print(
             "---------------------------------------------------------------------");
-
       // 1) Der Benutzer möchte sich mit Username und Passwort einloggen.
       case "n" || "N":
         stdout.write("Bitte gib deinen Benutzernamen ein: ");
@@ -131,17 +126,11 @@ void main() {
 // 5) Das Ergebnis der Berechnung ausgeben (Funktion getInvoiceResult):
             print(
                 "---------------------------------------------------------------------");
-            double itemPrice = double.parse(userChoiceInput4d); // "itemPrice" ist ein "double" und "userChoiceInput4d" ist ein "String" --> umwandeln mit "double.parse(userChoiceInput4d)."
+            double itemPrice = double.parse(
+                userChoiceInput4d); // "itemPrice" ist ein "double" und "userChoiceInput4d" ist ein "String" --> umwandeln mit "double.parse(userChoiceInput4d)."
             double quantity = double.parse(userChoiceInput4c);
-            // double taxSum = 0;
-            // double totalSum = 0;
-
             print(
-                //    "Deine Ausgabe über ${getInvoiceResult(200, 2,)} € enthält xxx € Mehrwertsteuer.");
-                "Du hast bei $userChoiceInput4a für $userChoiceInput4c Stück $userChoiceInput4b einen Betrag über ${getInvoiceResult(itemPrice, quantity)} € ausgegeben.");
-
-            //print (getInvoiceResult(itemPrice, quantity));n
-
+                "Du hast bei $userChoiceInput4a für $userChoiceInput4c Stück $userChoiceInput4b einen Betrag über ${getInvoiceResult(itemPrice, quantity).toStringAsFixed(2)} € ausgegeben.");
             print(
                 "---------------------------------------------------------------------");
             isMenuPartTwoRunning = false;
