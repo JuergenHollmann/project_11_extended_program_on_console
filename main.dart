@@ -104,7 +104,7 @@ void main() {
             String userChoiceInput4a = stdin.readLineSync()!;
             print(
                 "---------------------------------------------------------------------");
-            print("Du warst einkaufen bei $userChoiceInput4a.");
+            print("Du warst einkaufen bei \"$userChoiceInput4a.\"");
             print(
                 "---------------------------------------------------------------------");
 
@@ -113,7 +113,7 @@ void main() {
             String userChoiceInput4b = stdin.readLineSync()!;
             print(
                 "---------------------------------------------------------------------");
-            print("Du warst einkaufen bei $userChoiceInput4b.");
+            print("Du hast dort den Artikel \"$userChoiceInput4b\" gekauft.");
             print(
                 "---------------------------------------------------------------------");
 
@@ -126,7 +126,8 @@ void main() {
 
             // 4d) Der Benutzer muss eingeben, was 1 Stück von dem Artikel kostet.
             stdout.write("Was hat der Artikel (in €) gekostet?           ");
-            stdin.readLineSync();
+            String userChoiceInput4d = stdin.readLineSync()!;
+            userChoiceInput4d.toString();
 
 // Überprüfen, ob der User hier NUR Ziffern (als double und mit max. einem Punkt und "0" darf erlaubt sein) eingegeben hat.
 
@@ -139,13 +140,14 @@ void main() {
 // 5) Das Ergebnis der Berechnung ausgeben (Funktion getInvoiceResult):
             print(
                 "---------------------------------------------------------------------");
-            // double itemPrice = 200;
+            // double itemPrice = userChoiceInput4d; // "itemPrice" ist ein "double" und "userChoiceInput4d" ist ein "String" --> umwandeln.
             // double quantity = 1;
             // double taxSum = 0;
             // double totalSum = 0;
+
             print(
                 //    "Deine Ausgabe über ${getInvoiceResult(200, 2,)} € enthält xxx € Mehrwertsteuer.");
-                "Du hast für $userChoiceInput4c $userChoiceInput4b einen Betrag über ${getInvoiceResult(199.99, 2.34)} € ausgegeben.");
+                "Du hast für $userChoiceInput4c $userChoiceInput4b einen Betrag über ${getInvoiceResult(199.00, 2.34)} € ausgegeben.");
 
             //print (getInvoiceResult(itemPrice, quantity));
 
