@@ -14,20 +14,15 @@ double getInvoiceResult(
       "gekaufte Einheiten:   $quantity Stück"); // auf 2 Stellen nach dem Komma kürzen, wenn kg oder andere Einheiten ausgewählt werden.
 
   print(
-      "Mehrwertsteuer:       ${taxSum.toStringAsFixed(2)} €"); // auf 2 Stellen hinter dem Komma gekürzt
+      "Mehrwertsteuer:       ${taxSum.toStringAsFixed(2)} €"); // auf 2 Stellen nach dem Komma gekürzt
   print("Gesamtsumme           ${totalSum.toStringAsFixed(2)} €");
   print(
       "---------------------------------------------------------------------");
 
-  return totalSum; //                                   auf 2 Stellen nach dem Komma kürzen
+  return totalSum; // auf 2 Stellen nach dem Komma gekürzt
 }
 
 // Code für später:
-
-// int productResult(int num1, int num2) {
-//   int result = num1 + num2;
-//   return result;
-// }
 
 // class Invoice {
 //   double itemPrice;
