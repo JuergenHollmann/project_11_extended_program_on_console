@@ -16,6 +16,7 @@ bool functionCheckUserName(String inputUserName){
   if(checkUserName == inputUserName){
     result = true;
   }else if (checkUserName != inputUserName){
+    // das "if" ist eigentlich überflüssig, nur zur Übung!
     result = false;
   }
   return result;
