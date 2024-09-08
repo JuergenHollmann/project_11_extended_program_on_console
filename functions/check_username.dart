@@ -1,3 +1,4 @@
+// check_username.dart
 /*-----------------------------------------------------------
 Funktion: Überprüfen ob der Benutzername korrekt ist.
 -------------------------------------------------------------
@@ -7,19 +8,14 @@ Ausgabe:            Text: "Benutzername korrekt"
 Ausgabe_Datentyp:   String
 Funktions_Name:     checkUserName
 Eingabe_Datentyp:   String
-Eingabe_Name:       check_UserName
-*/
-String functionCheckUserName(String checkUserName){
+Eingabe_Name:       inputUserName
+-----------------------------------------------------------*/
+String functionCheckUserName(String inputUserName){
   String checkUserName = "Jürgen";
-  if(checkUserName == "Jürgen"){
-    print("Der Benutzername \"$checkUserName\" wurde korrekt eingegeben");
+  if(checkUserName == inputUserName){
+    print("Der Benutzername \"$checkUserName\" wurde \u{1f600} korrekt \u{1f600} eingegeben!"); // \u{1f600} = 😀
   }else{
-    print("Der Benutzername wurde NICHT korrekt eingegeben");
+    print("Der Benutzername \"$inputUserName\" wurde NICHT korrekt eingegeben!");
   }
   return checkUserName;
   }
-
-// void functionCheckUserName() {
-//   // "Hello World \u{1f600}"); // ergibt dann "Hello World 😀"
-//   print("Jürgen");
-//}
