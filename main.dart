@@ -109,7 +109,19 @@ void main() {
                 "Wieviel Stück von dem Artikel hast Du gekauft? "); // xxxPrice
             String userChoiceInput4c = stdin.readLineSync()!;
 
-// Überprüfen, ob der User hier NUR Ziffern (als int und mit max. einem Punkt und "0" ist nicht erlaubt) eingegeben hat.
+// Überprüfen, ob der User hier NUR Ziffern und mit max. einem Punkt eingegeben hat.
+//   String input = "$userChoiceInput4c";
+//   if (int.tryParse(input) != null) {
+//     print("----------------------------------------------");
+//     print("Deine Eingabe ist numerisch: --> $input <--");
+//   } else {
+//     print("----------------------------------------------");
+//     print("Deine Eingabe ist NICHT numerisch: --> $input <--");
+//     print("Es sind nur Ziffern von 0 bis 9 und ein Punkt erlaubt!");
+//   }
+//   print("----------------------------------------------");
+// }
+
 
             // 4d) Der Benutzer muss eingeben, was 1 Stück von dem Artikel kostet.
             stdout.write("Was hat der Artikel (in €) gekostet?           ");
