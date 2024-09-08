@@ -9,4 +9,5 @@ bool functionCheckPassword(String inputPassword) {
   }
   return result;
 }
+
 // print(functionCheckPassword(inputPassword)); // gibt den bool-Wert zurück
