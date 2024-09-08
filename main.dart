@@ -1,6 +1,7 @@
-import 'dart:io' show stdin, stdout;
-import 'functions/get_invoice_result.dart';
+import "dart:io" show stdin, stdout;
+import "functions/get_invoice_result.dart";
 import "functions/check_username.dart";
+import "functions/check_password.dart";
 
 void main() {
   stdout.write(
@@ -23,12 +24,12 @@ void main() {
         "Was möchtest du jetzt tun? \n * Jetzt ei[n]loggen \n * Die App [b]eenden \n Bitte alle Eingaben mit \"Enter\" bestätigen.");
     print(
         "---------------------------------------------------------------------");
-    // Eingabe des Benutzers.
+// Eingabe des Benutzers.
     String userChoiceInput = stdin.readLineSync()!;
     print(
         "---------------------------------------------------------------------");
     switch (userChoiceInput) {
-      // 2) Der Benutzer möchte das Programm beenden.
+// 2) Der Benutzer möchte das Programm beenden.
       case "b" || "B":
         isMenuPartOneRunning = false;
         print("Du hast [$userChoiceInput] = \"Beenden\" eingegeben.");
@@ -37,71 +38,65 @@ void main() {
         print("Die App wurde vom User beendet.");
         print(
             "---------------------------------------------------------------------");
-      // 1) Der Benutzer möchte sich mit seinem Benutzernamen und Passwort einloggen:
+// 1) Der Benutzer möchte sich mit seinem Benutzernamen und Passwort einloggen:
       case "n" || "N":
         print("Du hast [$userChoiceInput] = \"Einloggen\" eingegeben.");
         print(
             "---------------------------------------------------------------------");
-        // isMenuPartOneRunning = false; // nur zum Testen
-        // isMenuPartTwoRunning = false; // nur zum Testen
-
-        // 1a) Der Benutzer muss seinen Benutzernamen eingeben:
+// 1a) Der Benutzer muss seinen Benutzernamen eingeben:
         stdout.write("Bitte gib deinen Benutzernamen ein: ");
         String inputUserName = stdin.readLineSync()!;
         print("Du hast \"$inputUserName\" als Benutzername eingegeben.");
-
-        // Überprüfen ob der Benutzername korrekt ist --> mit functionCheckUserName:
-        // inputUserName = functionCheckUserName(inputUserName); // funzt nur mit "check_username_old.dart"
-        // print(functionCheckUserName(inputUserName)); // gibt den bool-Wert zurück
+// Überprüfen ob der Benutzername korrekt ist --> mit functionCheckUserName:
         if (functionCheckUserName(inputUserName) == true) {
           print(
               "Der Benutzername \"$inputUserName\" wurde \u{1f600} korrekt \u{1f600} eingegeben!"); // \u{1f600} = 😀
         } else {
           print(
-              "Der Benutzername \"$inputUserName\" wurde NICHT korrekt eingegeben!");
+              "Der Benutzername \"$inputUserName\" ist leider NICHT korrekt!");
           print(
               "---------------------------------------------------------------------");
           break;
         }
         print(
             "---------------------------------------------------------------------");
-
-        // 1b) Der Benutzer muss sein Passwort eingeben.
-        stdout.write("Bitte gib dein Passwort ein:        ");
-        stdin.readLineSync();
-
-// Überprüfen ob das Passwort korrekt ist:
-        // function code
-        // print("Benutzername und Passwort wurden korrekt eingeben.");
+// 1b) Der Benutzer muss sein Passwort eingeben:
+        stdout.write("Bitte gib dein Passwort ein: ");
+        String inputPassword = stdin.readLineSync()!;
+        print("Du hast \"$inputPassword\" als Passwort eingegeben.");
+// Überprüfen ob das Passwort korrekt ist --> mit functionCheckPassword:
+        if (functionCheckPassword(inputPassword) == true) {
+          print(
+              "Der Passwort \"$inputPassword\" wurde \u{1f600} korrekt \u{1f600} eingegeben!"); // \u{1f600} = 😀
+        } else {
+          print("Der Passwort \"$inputPassword\" ist leider NICHT korrekt!");
+          print(
+              "---------------------------------------------------------------------");
+          break;
+        }
         print(
             "---------------------------------------------------------------------");
         isMenuPartOneRunning = false;
         isMenuPartTwoRunning = true;
-
       default:
         print("Deine Eingabe --> $userChoiceInput <-- war ungültig!");
     }
-
     if (isMenuPartTwoRunning) {
-// Wenn es in den nächsten Bereich gehen soll:
-      // Wie lange läuft der zweite Teil des Programms?
+// Wenn es in den nächsten Bereich gehen soll: Wie lange läuft der zweite Teil des Programms?
       while (isMenuPartTwoRunning) {
         isMenuPartTwoRunning = true;
-
         print(
             "Was möchtest du jetzt tun? \n * Eine Qui[t]tung eingeben \n * Die App [b]eenden \n Bitte die Eingabe mit \"Enter\" bestätigen.");
         print(
             "---------------------------------------------------------------------");
-
-        // Eingabe des Benutzers.
+// Eingabe des Benutzers.
         String userChoiceInput = stdin.readLineSync()!;
         print("Du hast [$userChoiceInput] = \"Quittung\" eingegeben.");
         print(
             "---------------------------------------------------------------------");
-
-        // Überprüfen, was der Benutzer eingegeben hat und ob das einem der cases entspricht:
+// Überprüfen, was der Benutzer eingegeben hat und ob das einem der cases entspricht:
         switch (userChoiceInput) {
-          // 2) Der Benutzer mmöchte das Programm beenden.
+// 2) Der Benutzer mmöchte das Programm beenden.
           case "b" || "B":
             isMenuPartTwoRunning = false;
             print("Du hast [$userChoiceInput] = \"Beenden\" eingegeben.");
@@ -110,29 +105,24 @@ void main() {
             print("Die App wurde vom User beendet.");
             print(
                 "---------------------------------------------------------------------");
-
-          // 3) Der Benutzer möchte jetzt eine Quittung eingeben.
+// 3) Der Benutzer möchte jetzt eine Quittung eingeben.
           case "t" || "T":
-
-            // 4a) Der Benutzer muss eingeben, bei welchem Händler er eingekauft hat.
+// 4a) Der Benutzer muss eingeben, bei welchem Händler er eingekauft hat.
             stdout.write("Wo warst Du beim Einkaufen?                    ");
             String userChoiceInput4a = stdin.readLineSync()!;
             print("Du warst einkaufen bei \"$userChoiceInput4a.\"");
             print(
                 "---------------------------------------------------------------------");
-
-            // 4b) Der Benutzer muss eingeben, welchen Artikel er bei dem Händler eingekauft hat.
+// 4b) Der Benutzer muss eingeben, welchen Artikel er bei dem Händler eingekauft hat.
             stdout.write("Welchen Artikel hast Du gekauft?               ");
             String userChoiceInput4b = stdin.readLineSync()!;
             print("Du hast dort den Artikel \"$userChoiceInput4b\" gekauft.");
             print(
                 "---------------------------------------------------------------------");
-
-            // 4c) Der Benutzer muss eingeben, wieviel Stück er von dem Artikel eingekauft hat.
+// 4c) Der Benutzer muss eingeben, wieviel Stück er von dem Artikel eingekauft hat.
             stdout.write(
                 "Wieviel Stück von dem Artikel hast Du gekauft? "); // xxxPrice
             String userChoiceInput4c = stdin.readLineSync()!;
-
 // Überprüfen, ob der User hier NUR Ziffern und mit max. einem Punkt eingegeben hat.
 //   String input = "$userChoiceInput4c";
 //   if (int.tryParse(input) != null) {
@@ -145,22 +135,16 @@ void main() {
 //   }
 //   print("----------------------------------------------");
 // }
-
-            // 4d) Der Benutzer muss eingeben, was 1 Stück von dem Artikel kostet.
+// 4d) Der Benutzer muss eingeben, was 1 Stück von dem Artikel kostet.
             stdout.write("Was hat der Artikel (in €) gekostet?           ");
             String userChoiceInput4d = stdin.readLineSync()!;
-
 // Überprüfen, ob der User hier NUR Ziffern (als double und mit max. einem Punkt und "0" darf erlaubt sein) eingegeben hat.
-
 // Wenn der User nur Ziffern eigegeben hat, die MwSt. berechnen.
 // -> erledigt in function "getInvoiceResult".
-
 // Nach der MwSt.-Berechnung die Zwischensumme mit der Anzahl der Artikel multiplizieren.
 // -> erledigt in function "getInvoiceResult".
-
 // 5) Das Ergebnis der Berechnung ausgeben:
 // -> erledigt in function "getInvoiceResult".
-
             print(
                 "---------------------------------------------------------------------");
             double itemPrice = double.parse(
