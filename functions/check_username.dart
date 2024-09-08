@@ -10,14 +10,15 @@ Funktions_Name:     functionCheckUserName
 Eingabe_Datentyp:   String
 Eingabe_Name:       inputUserName
 -----------------------------------------------------------*/
-bool functionCheckUserName(String inputUserName){
+bool functionCheckUserName(String inputUserName) {
   String checkUserName = "Jürgen";
   bool result = false;
-  if(checkUserName == inputUserName){
+  if (checkUserName == inputUserName) {
     result = true;
-  }else if (checkUserName != inputUserName){
+  } else if (checkUserName != inputUserName) {
     // das "if" ist eigentlich überflüssig, nur zur Übung!
     result = false;
   }
   return result;
-  }
+}
+// print(functionCheckUserName(inputUserName)); // gibt den bool-Wert zurück
