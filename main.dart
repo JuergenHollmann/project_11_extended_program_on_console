@@ -152,12 +152,12 @@ void main() {
                 userChoiceInput4d); // "itemPrice" ist ein "double" und "userChoiceInput4d" ist ein "String" --> umgewandelt mit "double.parse(userChoiceInput4d)."
             double quantity = double.parse(userChoiceInput4c);
             print(
-                "Du hast bei $userChoiceInput4a für $userChoiceInput4c Stück $userChoiceInput4b einen Betrag über ${getInvoiceResult(itemPrice, quantity).toStringAsFixed(2)} € ausgegeben.");
+                "Du hast bei $userChoiceInput4a für $userChoiceInput4c Stück $userChoiceInput4b einen Betrag über ${getInvoiceResult(itemPrice, quantity).toStringAsFixed(2)} € 💶 ausgegeben."); // 1f4b6
             print(
                 "---------------------------------------------------------------------");
             isMenuPartTwoRunning = false;
           default:
-            print("Deine Eingabe --> $userChoiceInput <-- war ungültig!");
+            print("Deine Eingabe ☝️ --> $userChoiceInput <-- ☝️ war ungültig!"); // 261d
         }
       }
     }
