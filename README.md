@@ -1,5 +1,5 @@
-# project_10_first_program_on_console
-My first program on the console of VSCode which shows a little demo of the first menu when the user starts the app "WorkBuddy".
+# project_11_extended_program_on_console
+My second program on the console of VSCode which shows a little demo of the first menu when the user starts the app "WorkBuddy".
 --> Mein erstes Programm auf der Konsole von VSCode, das eine kleine Demo des ersten Menüs zeigt, wenn der Benutzer die App „WorkBuddy“ startet.
 
 ## Usage 
