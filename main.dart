@@ -1,4 +1,4 @@
-// project_11_extended_program_on_console
+// project_11_extended_program_on_console (renamed on gitHub)
 import "dart:io" show stdin, stdout;
 import "functions/get_invoice_result.dart";
 import "functions/check_username.dart";
